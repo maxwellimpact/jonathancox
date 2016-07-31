@@ -34,3 +34,11 @@ $factory->define(App\Project::class, function (Faker\Generator $faker) {
         'image_url' => $faker->imageUrl(800, 600, 'cats')
     ];
 });
+
+$factory->define(App\Link::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->jobTitle,
+        'url' => $faker->url,
+        'image_url' => $faker->imageUrl(120, 120, 'cats')
+    ];
+});

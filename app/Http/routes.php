@@ -22,3 +22,7 @@ Route::get('/skills', function () {
 Route::get('/projects', function () {
     return App\Project::all();
 });
+
+Route::get('/links', function () {
+    return App\Link::all();
+});
