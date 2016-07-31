@@ -18,8 +18,8 @@ class CreateProjectsTable extends Migration
             
             $table->string('title');
             $table->timestamp('date');
-            $table->timestamp('description');
-            $table->timestamp('image_url');
+            $table->text('description');
+            $table->text('image_url');
         });
     }
 
