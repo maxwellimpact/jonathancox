@@ -18,3 +18,7 @@ Route::get('/', function () {
 Route::get('/skills', function () {
     return App\Skill::all();
 });
+
+Route::get('/projects', function () {
+    return App\Project::all();
+});

@@ -25,3 +25,12 @@ $factory->define(App\Skill::class, function (Faker\Generator $faker) {
         'title' => $faker->jobTitle
     ];
 });
+
+$factory->define(App\Project::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->jobTitle,
+        'date' => $faker->date,
+        'description' => $faker->realText(150, 1),
+        'image_url' => $faker->imageUrl(800, 600, 'cats')
+    ];
+});
