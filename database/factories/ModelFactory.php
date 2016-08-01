@@ -42,3 +42,11 @@ $factory->define(App\Link::class, function (Faker\Generator $faker) {
         'image_url' => $faker->imageUrl(120, 120, 'cats')
     ];
 });
+
+$factory->define(App\Contact::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->safeEmail,
+        'message' => $faker->realText(150, 1)
+    ];
+});

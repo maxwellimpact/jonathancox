@@ -26,3 +26,6 @@ Route::get('/projects', function () {
 Route::get('/links', function () {
     return App\Link::all();
 });
+
+Route::get('/contact', 'ContactController@create');
+Route::post('/contact', 'ContactController@store');
