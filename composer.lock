@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1cc762efd9f1238ca53d768c7ae9c995",
-    "content-hash": "8b1485987e7c5949da82435d403e52e8",
+    "hash": "3bcee6464d097df5392da4d54871cd4a",
+    "content-hash": "3988a3ad9a95c83cdde08bc206965f6a",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -3101,6 +3101,47 @@
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
             "time": "2016-06-29 05:41:56"
+        },
+        {
+            "name": "tightenco/mailthief",
+            "version": "v0.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/tightenco/mailthief.git",
+                "reference": "478f33ecce3e97ab4d0238db9b801d8071dad6a8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/tightenco/mailthief/zipball/478f33ecce3e97ab4d0238db9b801d8071dad6a8",
+                "reference": "478f33ecce3e97ab4d0238db9b801d8071dad6a8",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/mail": "^5.1",
+                "illuminate/view": "^5.1"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MailThief\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "description": "A fake Mailer for Laravel applications that takes the pain out of testing mail.",
+            "time": "2016-07-29 13:30:36"
         },
         {
             "name": "webmozart/assert",
