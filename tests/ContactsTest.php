@@ -12,22 +12,27 @@ class ContactsTest extends TestCase
 {
     use DatabaseMigrations;
 
+    public function setUp()
+    {
+        parent::setUp();
+        MailThief::hijack();    
+    }
+
     public function testContactCreatedFromPostSubmission()
     {
-        MailThief::hijack();
-        $contact = factory(Contact::class)->make();
+        $contact = factory(Contact::class)->make()->toArray();
         
         $this->visit('/contact')
-             ->type($contact->name, 'name')
-             ->type($contact->email, 'email')
-             ->type($contact->message, 'message')
+             ->type($contact['name'], 'name')
+             ->type($contact['email'], 'email')
+             ->type($contact['message'], 'message')
              ->press('Contact');
              
-        $contact_record = Contact::first();
+        $contact_record = Contact::first()->toArray();
         
         $difference = array_diff(
-          $contact->toArray(),
-          $contact_record->toArray()
+          $contact,
+          $contact_record
         );
         
         $this->assertTrue(!count($difference));
@@ -35,7 +40,6 @@ class ContactsTest extends TestCase
     
     public function testContactStoreSendsEmail()
     {
-        MailThief::hijack();
         $contact = factory(Contact::class)->make();
         
         $this->post('/contact', $contact->toArray());
