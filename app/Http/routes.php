@@ -31,5 +31,9 @@ Route::get('/profile', function () {
     return App\User::find(1)->profile;
 });
 
+Route::get('/commands', function () {
+    return config('commands.list');
+});
+
 Route::get('/contact', 'ContactController@create');
 Route::post('/contact', 'ContactController@store');
