@@ -50,3 +50,10 @@ $factory->define(App\Contact::class, function (Faker\Generator $faker) {
         'message' => $faker->realText(150, 1)
     ];
 });
+
+$factory->define(App\Profile::class, function (Faker\Generator $faker) {
+    return [
+        'title' => $faker->jobTitle,
+        'bio' => $faker->realText(150, 1)
+    ];
+});
