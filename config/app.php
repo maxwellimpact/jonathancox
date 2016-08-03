@@ -4,6 +4,18 @@ return [
 
     /*
     |--------------------------------------------------------------------------
+    | Admin Email
+    |--------------------------------------------------------------------------
+    |
+    | This value sets the default admin for the application. This is a simple 
+    | app so its just one, no need to fret about it!
+    |
+    */
+    
+    'admin' => env('APP_ADMIN_EMAIL', null),
+
+    /*
+    |--------------------------------------------------------------------------
     | Application Environment
     |--------------------------------------------------------------------------
     |
