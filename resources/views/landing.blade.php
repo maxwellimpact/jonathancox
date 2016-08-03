@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Jonathan Cox - Full-Stack Developer</title>
+        <title>{{ $me->name }} - {{ $me->profile->title }}</title>
         
         <link href='/css/app.css' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200|Scope+One' rel='stylesheet' type='text/css'>
@@ -10,7 +10,10 @@
         <div class="container">
             <div class="content">
                 <header>
-                    Jonathan Cox - Full-Stack Developer
+                    {{ $me->name }} - {{ $me->profile->title }} <!-- arghhh -->
+                    <div>
+                        <img src="{{ $me->profile->photo_url }}" />
+                    </div>
                 </header>
                 <input name="search" />
             </div>

@@ -12,7 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('landing');
+    return view('landing', [
+        'me' => App\User::with('profile')->first()
+    ]);
 });
 
 Route::get('/skills', function () {
