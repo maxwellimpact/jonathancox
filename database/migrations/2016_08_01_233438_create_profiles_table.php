@@ -18,6 +18,7 @@ class CreateProfilesTable extends Migration
             
             $table->string('title');
             $table->text('bio');
+            $table->text('photo_url');
             
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

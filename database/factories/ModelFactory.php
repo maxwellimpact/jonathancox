@@ -54,6 +54,7 @@ $factory->define(App\Contact::class, function (Faker\Generator $faker) {
 $factory->define(App\Profile::class, function (Faker\Generator $faker) {
     return [
         'title' => $faker->jobTitle,
-        'bio' => $faker->realText(150, 1)
+        'bio' => $faker->realText(150, 1),
+        'photo_url' => $faker->imageUrl(120, 120, 'business')
     ];
 });
