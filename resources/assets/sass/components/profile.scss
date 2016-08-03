@@ -1,0 +1,40 @@
+.profile {
+    margin: calc(50vh - 120px) auto;
+    
+    max-width: 450px;
+    width: 100%;
+    
+    .profile__group {
+        text-align: center;   
+    }
+    
+    .profile__desc {
+        text-align: right;
+        padding-right: 1.5em;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .profile__name, .profile__title {
+        margin: 0;
+    }
+    
+    .profile__photo {
+        display: inline-block;
+        vertical-align: middle;
+        padding-left: 1em;
+        border-left: 1px solid white;
+        
+        img {
+            border-radius: 50%;
+        }
+    }
+    
+    .profile__search {
+        width: 100%;
+        padding: .75em .5em;
+        border-radius: .25em;
+        border: none;
+        margin-top: 1em;
+    }
+}

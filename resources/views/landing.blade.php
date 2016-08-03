@@ -8,15 +8,26 @@
     </head>
     <body>
         <div class="container">
-            <div class="content">
-                <header>
-                    {{ $me->name }} - {{ $me->profile->title }} <!-- arghhh -->
-                    <div>
+            <header class="profile">
+                <div class="profile__group">
+                    <!-- arghhh -->
+                    <div class="profile__desc">
+                        <h1 class="profile__name">
+                            {{ $me->name }}
+                        </h1>
+                        <p class="profile__title">
+                            {{ $me->profile->title }}
+                        </p>
+                    </div>
+                    <div class="profile__photo">
                         <img src="{{ $me->profile->photo_url }}" />
                     </div>
-                </header>
-                <input name="search" />
-            </div>
+                </div>
+                
+                <div class="profile__group">
+                    <input class="profile__search" name="search" placeholder="learn more..." />
+                </div>
+            </header>
         </div>
     </body>
 </html>
