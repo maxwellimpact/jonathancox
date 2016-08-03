@@ -17,9 +17,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/skills', function () {
-    return App\Skill::all();
-});
+Route::resource('skills', 'SkillController');
 
 Route::get('/projects', function () {
     return App\Project::all();
