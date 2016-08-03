@@ -4,7 +4,7 @@
         <title>{{ $me->name }} - {{ $me->profile->title }}</title>
         
         <link href='/css/app.css' rel='stylesheet' type='text/css'>
-        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200|Scope+One' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100|Scope+One' rel='stylesheet' type='text/css'>
     </head>
     <body>
         <div class="container">

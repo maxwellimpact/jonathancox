@@ -1,7 +1,6 @@
 .profile {
     margin: calc(50vh - 120px) auto;
-    
-    max-width: 450px;
+    max-width: 480px;
     width: 100%;
     
     .profile__group {
@@ -20,6 +19,7 @@
         margin: 0;
     }
     
+    .profile__name {font-size: 3.25em;}
     .profile__title {font-family: 'Scope One', serif;}
     
     .profile__photo {
@@ -40,5 +40,9 @@
         margin-top: 1.25em;
         font-size: 1.25em;
         border: none;
+        
+        &:focus {
+            outline: 0;
+        }
     }
 }
